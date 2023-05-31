@@ -23,10 +23,10 @@ let pokemonList = [ //pokemon names & stats for pokedex
 
 for (let i = 0; i < pokemonList.length; i++) {
     if (pokemonList[i].height >=2){
-        document.write(pokemonList[i].name + pokemonList[i].height + "- Wow, this is big!");
+        document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- Wow, this is big!");
     }else if (pokemonList[i].height <2 && pokemonList[i].height >=1){
-        document.write(pokemonList[i].name + pokemonList[i].height + "- This is an average size.");
+        document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- This is an average size.");
     } else {
-        document.write(pokemonList[i].name + pokemonList[i].height + "- Oh! This is very small.");
+        document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- Oh! This is very small.");
     }
     }
