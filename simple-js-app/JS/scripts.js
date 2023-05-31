@@ -1,21 +1,21 @@
 /*JS for Intro to JavaScript*/
 
-let pokemonlist = [ //pokemon names & stats for pokedex
+let pokemonList = [ //pokemon names & stats for pokedex
     {
         name: 'bulbasaur', 
-        height: '.711',  
+        height: .711,  
         types: ['grass', 'poison'], 
         ndex: 0001
     },
     {
         name: 'ivysaur',
-        height: '1',
+        height: 1,
         types: ['grass', 'poison'],
         ndex: 0002
     },
     {
         name: 'venusaur',
-        height: '2',
+        height: 2,
         types: ['grass', 'poison'],
         ndex: 0003
     }
