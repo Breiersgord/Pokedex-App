@@ -1,32 +1,37 @@
 /*JS for Intro to JavaScript*/
 
-let pokemonList = [ //pokemon names & stats for pokedex
+let pokemonList = [ //pokemon names & stats for pokedex   
     {
-        name: 'bulbasaur', 
+        name: ' bulbasaur' , 
         height: .711,  
-        types: ['grass', 'poison'], 
-        ndex: 0001
+        types: [' grass', ' poison '], 
+        ndex: ' 0001 '
     },
     {
-        name: 'ivysaur',
+        name: ' ivysaur',
         height: 1,
-        types: ['grass', 'poison'],
-        ndex: 0002
+        types: [' grass', ' poison '],
+        ndex: ' 0002 '
     },
     {
-        name: 'venusaur',
+        name: ' venusaur',
         height: 2,
-        types: ['grass', 'poison'],
-        ndex: 0003
+        types: [' grass', ' poison '],
+        ndex: ' 0003 '
     }
 ];
 
 for (let i = 0; i < pokemonList.length; i++) {
     if (pokemonList[i].height >=2){
-        document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- Wow, this is big!");
-    }else if (pokemonList[i].height <2 && pokemonList[i].height >=1){
-        document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- This is an average size.");
+        //document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- Wow, this is big!");
+        document.write('<p> ' + pokemonList[i].ndex + pokemonList[i].name + ": " + pokemonList[i].height + "m," + pokemonList[i].types + "- Wow, this is big!" + ' </p>')
+
+    } else if (pokemonList[i].height <2 && pokemonList[i].height >=1){
+        //document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- This is an average size.");
+        document.write('<p> ' + pokemonList[i].ndex + pokemonList[i].name + ": " + pokemonList[i].height + "m," + pokemonList[i].types + "- This is an average size." + ' </p>')
+
     } else {
-        document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- Oh! This is very small.");
+        //document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- Oh! This is very small.");
+        document.write('<p> ' + pokemonList[i].ndex + pokemonList[i].name + ": " + pokemonList[i].height + "m," + pokemonList[i].types + "- Oh! This is very small." + ' </p>')
     }
     }
