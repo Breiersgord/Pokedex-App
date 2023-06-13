@@ -38,3 +38,7 @@ function printArrayDetails(){
         }
     }
 }
+
+// Calling printArrayDetails function twice
+printArrayDetails();
+printArrayDetails();
