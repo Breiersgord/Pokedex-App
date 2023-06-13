@@ -60,6 +60,5 @@ function printArrayDetails(list){
     }
 }
 
-// Calling printArrayDetails function twice
-printArrayDetails(pokemonList);
-printArrayDetails(pokemonList2);
+printArrayDetails(pokemonList); // executes the function using ‘pokemonList‘ as its input
+printArrayDetails(pokemonList2); // executes the function using ‘pokemonList2‘ as its input
