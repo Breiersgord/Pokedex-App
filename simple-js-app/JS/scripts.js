@@ -43,7 +43,7 @@ let pokemonList2 = [ //pokemon names & stats for pokedex
 ];
 
 // printArrayDetails function declaration
-function printArrayDetails(){
+function printArrayDetails(list){
     for (let i = 0; i < pokemonList.length; i++) {
         if (pokemonList[i].height >=2){
             //document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- Wow, this is big!");
@@ -61,5 +61,5 @@ function printArrayDetails(){
 }
 
 // Calling printArrayDetails function twice
-printArrayDetails();
-printArrayDetails();
+printArrayDetails(pokemonList);
+printArrayDetails(pokemonList2);
