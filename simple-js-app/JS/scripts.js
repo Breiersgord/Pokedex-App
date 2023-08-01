@@ -1,46 +1,46 @@
 /*JS for Intro to JavaScript*/
 let pokemonRepository = (function () {
-let pokemonList = [ //pokemon names & stats for pokedex   
-    {
-        name: ' bulbasaur' , 
-        height: .7,  
-        types: [' grass', ' poison '], 
-        ndex: ' 0001 '
-    },
-    {
-        name: ' ivysaur',
-        height: 1,
-        types: [' grass', ' poison '],
-        ndex: ' 0002 '
-    },
-    {
-        name: ' venusaur',
-        height: 2,
-        types: [' grass', ' poison '],
-        ndex: ' 0003 '
-    }
-];
+    let pokemonList = [ //pokemon names & stats for pokedex   
+        {
+            name: ' bulbasaur' , 
+            height: .7,  
+            types: [' grass', ' poison '], 
+            ndex: ' 0001 '
+        },
+        {
+            name: ' ivysaur',
+            height: 1,
+            types: [' grass', ' poison '],
+            ndex: ' 0002 '
+        },
+        {
+            name: ' venusaur',
+            height: 2,
+            types: [' grass', ' poison '],
+            ndex: ' 0003 '
+        }
+    ];
 
-let pokemonList2 = [ //pokemon names & stats for pokedex   
-    {
-        name: ' charmander' , 
-        height: .6,  
-        types: ' fire', 
-        ndex: ' 0004 '
-    },
-    {
-        name: ' charmeleon',
-        height: 1.1,
-        types: ' fire',
-        ndex: ' 0005 '
-    },
-    {
-        name: ' charizard',
-        height: 1.7,
-        types: [' fire', ' flying '],
-        ndex: ' 0006 '
-    }
-];
+    let pokemonList2 = [ //pokemon names & stats for pokedex   
+        {
+            name: ' charmander' , 
+            height: .6,  
+            types: ' fire', 
+            ndex: ' 0004 '
+        },
+        {
+            name: ' charmeleon',
+            height: 1.1,
+            types: ' fire',
+            ndex: ' 0005 '
+        },
+        {
+            name: ' charizard',
+            height: 1.7,
+            types: [' fire', ' flying '],
+            ndex: ' 0006 '
+        }
+    ];
 })();
 
 // printArrayDetails function declaration
