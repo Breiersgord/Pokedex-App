@@ -41,7 +41,7 @@ let pokemonRepository = (function () {
             ndex: ' 0006 '
         }
     ];
-    
+
     //Puts the pokemon onto the list of pokemon
     function add(pokemon) {
         pokemonList.push(pokemon);
@@ -60,7 +60,7 @@ let pokemonRepository = (function () {
 
 // printArrayDetails function declaration
 function printArrayDetails(list){
-    pokemonList.forEach(function(pokemon) {
+    pokemonRepository.getAll().forEach(function(pokemon) {
         if (pokemon.height >=2){
             //document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- Wow, this is big!");
             document.write('<p> ' + pokemon.ndex + pokemon.name + ": " + pokemon.height + "m," + pokemon.types + "- Wow, this is big!" + ' </p>')
