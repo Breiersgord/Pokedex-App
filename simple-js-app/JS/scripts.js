@@ -41,6 +41,21 @@ let pokemonRepository = (function () {
             ndex: ' 0006 '
         }
     ];
+    
+    //Puts the pokemon onto the list of pokemon
+    function add(pokemon) {
+        pokemonList.push(pokemon);
+    }
+
+    //Gets all entries listed in the pokedex
+    function getAll() {
+        return pokemonList;
+    }
+
+    return {
+        add: add,
+        getAll: getAll
+    };
 })();
 
 // printArrayDetails function declaration
