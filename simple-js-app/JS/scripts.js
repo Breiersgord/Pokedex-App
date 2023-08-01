@@ -1,5 +1,5 @@
 /*JS for Intro to JavaScript*/
-
+let pokemonRepository = (function () {
 let pokemonList = [ //pokemon names & stats for pokedex   
     {
         name: ' bulbasaur' , 
@@ -41,6 +41,7 @@ let pokemonList2 = [ //pokemon names & stats for pokedex
         ndex: ' 0006 '
     }
 ];
+})();
 
 // printArrayDetails function declaration
 function printArrayDetails(list){
