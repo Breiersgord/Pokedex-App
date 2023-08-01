@@ -51,7 +51,7 @@ let pokemonRepository = (function () {
     function getAll() {
         return pokemonList;
     }
-
+   
     return {
         add: add,
         getAll: getAll
@@ -76,5 +76,4 @@ function printArrayDetails(list){
     });
 }
 
-printArrayDetails(pokemonList); // executes the function using ‘pokemonList‘ as its input
-printArrayDetails(pokemonList2); // executes the function using ‘pokemonList2‘ as its input
+printArrayDetails(pokemonRepository); // executes the function using ‘pokemonList‘ as its input
