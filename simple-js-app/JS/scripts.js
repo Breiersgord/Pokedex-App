@@ -21,27 +21,6 @@ let pokemonRepository = (function () {
         }
     ];
 
-    let pokemonList2 = [ //pokemon names & stats for pokedex   
-        {
-            name: ' charmander' , 
-            height: .6,  
-            types: ' fire', 
-            ndex: ' 0004 '
-        },
-        {
-            name: ' charmeleon',
-            height: 1.1,
-            types: ' fire',
-            ndex: ' 0005 '
-        },
-        {
-            name: ' charizard',
-            height: 1.7,
-            types: [' fire', ' flying '],
-            ndex: ' 0006 '
-        }
-    ];
-
     //Puts the pokemon onto the list of pokemon
     function add(pokemon) {
         pokemonList.push(pokemon);
