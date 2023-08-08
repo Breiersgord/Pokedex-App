@@ -1,2 +1,21 @@
 /*CSS for Intro to JavaScript*/
-   
+
+.button { /*button attributes*/
+    background-color: black; /*button color*/
+    color: white; /*text color*/
+    border: none; /*no border around button*/
+    text-align: center;
+    transition-duration: 0.4s; /*transtion time of color change for button:hover*/
+
+    /*padding: --px --px;
+    text-decoration: --;
+    display: --;
+    font-size: --px;
+    border-radius: --%;*/
+    /*additional button customizations tbd (^u^)*/
+  }
+
+.button:hover {
+    background-color: white; /*color of button when you hover*/
+    color: black; /*color of button text when you hover*/
+  }  
