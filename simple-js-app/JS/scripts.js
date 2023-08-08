@@ -44,7 +44,10 @@ function printArrayDetails(list){
         //array is = to '.pokemon-list', the class name for tag <ul>
         let listItem = document.createElement('li');
         //create a list item for the <ul> tag in HTML file
-        
+        let button = document.createElement('button'); //create button(s)
+            button.innerText = pokemon.name; //adds textual context (name of pokemon)
+            button.classList.add('button'); //adds CSS elements to button(s)
+
         //if (pokemon.height >=2){
             //document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- Wow, this is big!");
             //document.write('<p> ' + pokemon.ndex + pokemon.name + ": " + pokemon.height + "m," + pokemon.types + "- Wow, this is big!" + ' </p>')
