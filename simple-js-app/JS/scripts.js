@@ -40,6 +40,9 @@ let pokemonRepository = (function () {
 // printArrayDetails function declaration
 function printArrayDetails(list){
     pokemonRepository.getAll().forEach(function(pokemon) {
+        let pokemonList = document.querySelector('.pokemon-list');
+        //array is = to '.pokemon-list', the class name for tag <ul>
+        
         //if (pokemon.height >=2){
             //document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- Wow, this is big!");
             //document.write('<p> ' + pokemon.ndex + pokemon.name + ": " + pokemon.height + "m," + pokemon.types + "- Wow, this is big!" + ' </p>')
