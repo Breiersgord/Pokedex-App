@@ -48,6 +48,9 @@ function printArrayDetails(list){
             button.innerText = pokemon.name; //adds textual context (name of pokemon)
             button.classList.add('button'); //adds CSS elements to button(s)
 
+            listItem.appendChild(button);
+		    pokemonList.appendChild(listItem);
+
         //if (pokemon.height >=2){
             //document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- Wow, this is big!");
             //document.write('<p> ' + pokemon.ndex + pokemon.name + ": " + pokemon.height + "m," + pokemon.types + "- Wow, this is big!" + ' </p>')
