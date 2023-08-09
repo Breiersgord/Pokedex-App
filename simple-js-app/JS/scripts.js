@@ -31,15 +31,7 @@ let pokemonRepository = (function () {
         return pokemonList;
     }
    
-    return {
-        add: add,
-        getAll: getAll
-    };
-})();
-
-// printArrayDetails function declaration
-function printArrayDetails(list){
-    pokemonRepository.getAll().forEach(function(pokemon) {
+    function addListItem(pokemon){
         let pokemonList = document.querySelector('.pokemon-list');
         //array is = to '.pokemon-list', the class name for tag <ul>
         let listItem = document.createElement('li');
@@ -50,6 +42,21 @@ function printArrayDetails(list){
 
             listItem.appendChild(button);
 		    pokemonList.appendChild(listItem);
+
+    }
+   
+    return {
+        add: add,
+        getAll: getAll,
+        addListItem: addListItem
+    };
+})();
+
+// printArrayDetails function declaration
+function printArrayDetails(list){
+    pokemonRepository.getAll().forEach(function(pokemon) {//a block is w/i {}
+        
+        pokemonRepository.addListItem(pokemon);
 
         //if (pokemon.height >=2){
             //document.write(pokemonList[i].ndex + pokemonList[i].name + pokemonList[i].height + pokemonList[i].types + "- Wow, this is big!");
