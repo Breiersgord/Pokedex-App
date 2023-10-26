@@ -30,31 +30,34 @@ let pokemonRepository = (function () {
     function getAll() {
         return pokemonList;
     }
-   
+
     function addListItem(pokemon){
-        let pokemonList = document.querySelector('.pokemon-list');
+        let pokemonList = document.querySelector(".pokemon-list");
         //array is = to '.pokemon-list', the class name for tag <ul>
-        let listItem = document.createElement('li');
+        let listItem = document.createElement("li");
         //create a list item for the <ul> tag in HTML file
-        let button = document.createElement('button'); //create button(s)
+        let button = document.createElement("button"); //create button(s)
             button.innerText = pokemon.name; //adds textual context (name of pokemon)
-            button.classList.add('button'); //adds CSS elements to button(s)
+            button.classList.add("button"); //adds CSS elements to button(s)
 
             listItem.appendChild(button);
-		    
+		    pokemonList.appendChild(listItem)
 
     }
+
+    
    
     return {
         add: add,
         getAll: getAll,
-        addListItem: addListItem
+        addListItem: addListItem,
     };
 })();
 
 // printArrayDetails function declaration
 function printArrayDetails(list){
     pokemonRepository.getAll().forEach(function(pokemon) {//a block is w/i {}
+        
         
         pokemonRepository.addListItem(pokemon);
 
