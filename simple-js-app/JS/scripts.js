@@ -39,10 +39,16 @@ let pokemonRepository = (function () {
         let button = document.createElement("button"); //create button(s)
             button.innerText = pokemon.name; //adds textual context (name of pokemon)
             button.classList.add("button"); //adds CSS elements to button(s)
+            button.addEventListener("click", function () {
+                console.log(pokemon)});
 
             listItem.appendChild(button);
 		    pokemonList.appendChild(listItem)
 
+    }
+
+    function showDetails(pokemon){
+        console.log(pokemon)
     }
 
     
@@ -51,11 +57,12 @@ let pokemonRepository = (function () {
         add: add,
         getAll: getAll,
         addListItem: addListItem,
+        showDetails: showDetails
     };
 })();
 
 // printArrayDetails function declaration
-function printArrayDetails(list){
+function printArrayDetails(pokemonRepository){
     pokemonRepository.getAll().forEach(function(pokemon) {//a block is w/i {}
         
         
