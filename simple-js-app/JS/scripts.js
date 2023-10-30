@@ -18,11 +18,6 @@ let pokemonRepository = (function () {
         }
     }
 
-    //Puts the pokemon onto the list of pokemon
-    function add(pokemon) {
-        pokemonList.push(pokemon);
-    }
-
     //Gets all entries listed in the pokedex
     function getAll() {
         return pokemonList;
