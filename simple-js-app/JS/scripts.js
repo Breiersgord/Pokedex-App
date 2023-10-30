@@ -36,7 +36,24 @@ let pokemonRepository = (function () {
 
             listItem.appendChild(button);
 		    pokemonList.appendChild(listItem)
+    }
 
+    function loadList() {
+        return fetch(apiUrl).then(function (response) {
+            return response.json();
+        }).then(function (json) {
+            json.results.forEach(function (item) {
+                let pokemon = {
+                    name: item.name,
+                    detailsUrl: item.url,
+                    height: item.height
+                };
+                add(pokemon);
+                console.log(pokemon);
+            });
+        }).catch(function (e) {
+            console.error(e);
+        })
     }
 
     function showDetails(pokemon){
@@ -49,7 +66,8 @@ let pokemonRepository = (function () {
         add: add,
         getAll: getAll,
         addListItem: addListItem,
-        showDetails: showDetails
+        showDetails: showDetails,
+        loadList: loadList
     };
 })();
 
