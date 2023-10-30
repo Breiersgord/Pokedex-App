@@ -1,7 +1,7 @@
 /*JS for Intro to JavaScript*/
 let pokemonRepository = (function () {
     let pokemonList = [ /*pokemon names & stats for pokedex from API*/ ];
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150'; //the API with pokemon information
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/'; //the API with pokemon information
 
     //Puts the pokemon onto the list of pokemon
     function add(pokemon) {
