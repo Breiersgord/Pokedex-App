@@ -70,7 +70,9 @@ let pokemonRepository = (function () {
     }
 
     function showDetails(pokemon){
-        console.log(pokemon)
+        loadDetails(pokemon).then(function() { //shows all of the loadDetails items
+            console.log(pokemon); //logs to console
+        });
     }
 
     
