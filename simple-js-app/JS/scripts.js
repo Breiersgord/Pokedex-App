@@ -1,25 +1,22 @@
 /*JS for Intro to JavaScript*/
 let pokemonRepository = (function () {
-    let pokemonList = [ //pokemon names & stats for pokedex   
-        {
-            name: ' bulbasaur' , 
-            height: .7,  
-            types: [' grass', ' poison '], 
-            ndex: ' 0001 '
-        },
-        {
-            name: ' ivysaur',
-            height: 1,
-            types: [' grass', ' poison '],
-            ndex: ' 0002 '
-        },
-        {
-            name: ' venusaur',
-            height: 2,
-            types: [' grass', ' poison '],
-            ndex: ' 0003 '
+    let pokemonList = [ /*pokemon names & stats for pokedex from API*/ ];
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150'; //the API with pokemon information
+
+    //Puts the pokemon onto the list of pokemon
+    function add(pokemon) {
+        if (
+            // === is a strict equality comparison 
+            // && 'logical AND' operator for a set of boolean operands will be true if and only if all the operands are true. Otherwise it will be false.
+            typeof pokemon === "object" && 
+            "name" in pokemon &&
+            "detailsURL" in pokemon
+        ) {
+            pokemonList.push(pokemon);
+        }   else {
+            console.log("pokemon is not correct");
         }
-    ];
+    }
 
     //Puts the pokemon onto the list of pokemon
     function add(pokemon) {
