@@ -114,13 +114,13 @@ let pokemonRepository = (function () {
         }
     });
 
-    document.querySelector('#show-modal').addEventListener('click', () => {
-        showModal('modal title', 'this is the modal'); //targets the button element in the #show-modal id
-    });
+    //document.querySelector('#show-modal').addEventListener('click', () => {
+        //showModal('modal title', 'this is the modal'); //targets the button element in the #show-modal id
+    //});
   
-    function showDetails(item){
-        pokemonRepository.loadDetails(item).then(function () { //shows all of the loadDetails items
-            showModal(item); //logs to console
+    function showDetails(pokemon){
+        pokemonRepository.loadDetails(pokemon).then(function () { //shows all of the loadDetails items
+            showModal(pokemon); //logs to console
         });
         //pokemonRepository.showModal(item).then(function () { //not sure if this is needed here; placeholder
             //console.log(item);
@@ -134,7 +134,7 @@ let pokemonRepository = (function () {
         loadList: loadList,
         loadDetails: loadDetails,
         showDetails: showDetails,
-        showModal: showModal //pretty sure showModal needs to be returned; note to check in
+        //showModal: showModal //pretty sure showModal needs to be returned; note to check in
     };
 })();
 
