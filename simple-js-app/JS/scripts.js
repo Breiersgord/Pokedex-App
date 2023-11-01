@@ -77,6 +77,8 @@ let pokemonRepository = (function () {
         let closeButtonElement = document.createElement('button');
             closeButtonElement.classList.add('modal-close');
             closeButtonElement.innerText = 'Close';
+            closeButtonElement.addEventListener('click', hideModal);
+
 
         let titleElement = document.createElement('h1');
             titleElement.innerText = title;
@@ -91,6 +93,14 @@ let pokemonRepository = (function () {
 
             modalContainer.classList.add('is-visible');
     }
+
+    function hideModal() {
+        let modalContainer = document.querySelector('#modal-container');
+        modalContainer.classList.remove('is-visible');
+    }
+
+    
+  
 
     document.querySelector('#show-modal').addEventListener('click', () => {
         showModal('modal title', 'this is the modal'); //targets the button element in the #show-modal id
