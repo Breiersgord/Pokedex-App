@@ -69,7 +69,21 @@ let pokemonRepository = (function () {
 
     function showModal() { //the showModal function uses the document method querySelector(). 
         let modalContainer = document.querySelector('#modal-container'); //returns the first element w/i the document that matches #modal-container
-        modalContainer.classList.add('is-visible'); //class 'is.visible' added to return #modal-container.is-visible
+            modalContainer.classList.add('is-visible'); //class 'is.visible' added to return #modal-container.is-visible
+  	        modalContainer.innerHTML = ' ';  // Clear all existing modal content
+  	    let modal = document.createElement('div');
+  	        modal.classList.add('modal'); // Add the new modal content
+        let closeButtonElement = document.createElement('button');
+            closeButtonElement.classList.add('modal-close');
+            closeButtonElement.innerText = 'Close';
+        let titleElement = document.createElement('h1');
+            titleElement.innerText = title;
+        let contentElement = document.createElement('p');
+            contentElement.innerText = text;
+            modal.appendChild(closeButtonElement);
+            modal.appendChild(titleElement);
+            modal.appendChild(contentElement);
+            modalContainer.appendChild(modal); //these are all the children we addressed in the CSS
     }
 
     document.querySelector('#show-modal').addEventListener('click', () => {
@@ -81,6 +95,9 @@ let pokemonRepository = (function () {
         pokemonRepository.loadDetails(item).then(function () { //shows all of the loadDetails items
             console.log(item); //logs to console
         });
+        //pokemonRepository.showModal(item).then(function () { //not sure if this is needed here; placeholder
+            //console.log(item);
+        //});
     }
 
     
@@ -92,6 +109,7 @@ let pokemonRepository = (function () {
         loadList: loadList,
         loadDetails: loadDetails,
         showDetails: showDetails,
+        showModal: showModal //pretty sure showModal needs to be returned; note to check in
     };
 })();
 
