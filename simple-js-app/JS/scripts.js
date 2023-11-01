@@ -69,7 +69,6 @@ let pokemonRepository = (function () {
 
     function showModal(title, text) { //the showModal function uses the document method querySelector(). 
         let modalContainer = document.querySelector('#modal-container'); //returns the first element w/i the document that matches #modal-container
-            //modalContainer.classList.add('is-visible'); //class 'is.visible' added to return #modal-container.is-visible
   	        modalContainer.innerHTML = ' ';  // Clear all existing modal content
 
   	    let modal = document.createElement('div');
