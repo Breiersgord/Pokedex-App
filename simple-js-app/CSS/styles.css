@@ -20,7 +20,7 @@
     color: black; /*color of button text when you hover*/
 }  
 
-#modal-container {
+#modal-container { /*parent element as seen in the HTML*/
     position: fixed;
     padding: 20px;
     box-sizing: border-box;
@@ -41,7 +41,7 @@
     text-align: center;
 }
   
-.modal {
+.modal { /*child element of #modal-container*/
     margin: auto;
     display: inline-block;
     box-sizing: border-box;
@@ -52,7 +52,7 @@
     text-align: left;
 }
   
-.modal-close {
+.modal-close { /*child element of .modal*/
     float: right;
     /*-webkit-appearance: none;*/ 
         /*webkit is a CSS extension supported by the Webkit browser*/
@@ -63,11 +63,11 @@
     text-decoration: underline;
 }
   
-.modal h1 {
+.modal h1 { /*child element of .modal*/
     margin-top: 0;
 }
   
-.modal p {
+.modal p { /*child element of .modal*/
     margin-bottom: 0;
 }
   
