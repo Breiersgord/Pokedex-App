@@ -69,7 +69,7 @@ let pokemonRepository = (function () {
 
     let modalContainer = document.querySelector('#modal-container'); //returns the first element w/i the document that matches #modal-container
 
-    function showModal(title, text) { //the showModal function uses the document method querySelector(). 
+    function showModal(pokemon) { //the showModal function uses the document method querySelector(). 
   	        modalContainer.innerHTML = ' ';  // Clear all existing modal content
 
   	    let modal = document.createElement('div');
@@ -81,10 +81,10 @@ let pokemonRepository = (function () {
             closeButtonElement.addEventListener('click', hideModal);
 
         let titleElement = document.createElement('h1');
-            titleElement.innerText = title;
+            titleElement.innerText = "pokemon name" + ": " + pokemon.name;
 
         let contentElement = document.createElement('p');
-            contentElement.innerText = text;
+            contentElement.innerText = "pokemon height" + ": " + pokemon.height;
 
             modal.appendChild(closeButtonElement);
             modal.appendChild(titleElement);
