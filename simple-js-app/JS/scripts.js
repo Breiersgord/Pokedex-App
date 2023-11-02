@@ -7,7 +7,8 @@ let pokemonRepository = (function () {
     function add(pokemon) {
         if (
             typeof pokemon === "object" && 
-            "name" in pokemon 
+            "name" in pokemon &&
+            "detailsUrl" in pokemon
             // === is a strict equality comparison 
             // && 'logical AND' operator for a set of boolean operands will be true if and only if all the operands are true. Otherwise it will be false.
         ) {
@@ -43,10 +44,11 @@ let pokemonRepository = (function () {
             json.results.forEach(function (item) {
                 let pokemon = {
                     name: item.name,
-                    detailsUrl: item.url
+                    detailsUrl: item.url,
+                    imageUrl: item.spriteImage
                 };
                 add(pokemon);
-                console.log(pokemon);
+                //console.log(pokemon);
             });
         }).catch(function (e) {
             console.error(e);
@@ -83,9 +85,13 @@ let pokemonRepository = (function () {
         let titleElement = document.createElement('h1');
             titleElement.innerText = "pokemon name" + ": " + pokemon.name;
 
+        let spriteImage = document.createElement("img");
+            spriteImage.src = pokemon.imageUrl;           
+            
         let contentElement = document.createElement('p');
             contentElement.innerText = "pokemon height" + ": " + pokemon.height;
-
+            
+            modal.appendChild(spriteImage);
             modal.appendChild(closeButtonElement);
             modal.appendChild(titleElement);
             modal.appendChild(contentElement);
@@ -134,7 +140,7 @@ let pokemonRepository = (function () {
         loadList: loadList,
         loadDetails: loadDetails,
         showDetails: showDetails,
-        //showModal: showModal //pretty sure showModal needs to be returned; note to check in
+        showModal: showModal //pretty sure showModal needs to be returned; note to check in
     };
 })();
 
