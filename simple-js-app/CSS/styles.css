@@ -1,57 +1,23 @@
 /*CSS for Intro to JavaScript*/
 
-.button { /*button attributes*/
-    background-color: black; /*button color*/
+.button-class { /*button attributes*/
+    background-color: #3466af; /*button color*/
     color: white; /*text color*/
-    border: none; /*no border around button*/
     text-align: center;
-    transition-duration: 0.4s; /*transtion time of color change for button:hover*/
-
-    /*padding: --px --px;
-    text-decoration: --;
-    display: --;
-    font-size: --px;
-    border-radius: --%;*/
-    /*additional button customizations tbd (^u^)*/
+    font-family: 'Pokemon GB';
+    font-size: 15px;
+    transition-duration: 0.4s; /*transtion time of color change for button:hover*/ 
 }
 
-.button:hover {
-    background-color: white; /*color of button when you hover*/
-    color: black; /*color of button text when you hover*/
-}  
-
-#modal-container { /*parent element as seen in the HTML*/
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    
-    /* to show it above other content */
-    z-index: 999; 
-    
-    /* to allow scrolling if the screen is not high enough*/
-    overflow: auto; 
-    
-    /* this is used to center the modal */
-    display: grid;
-    text-align: center;
+.navbar {
+    background-color: #3466af;
+    color: #ffde00;
 }
   
-.modal { /*child element of #modal-container*/
-    margin: auto;
-    display: inline-block;
-    box-sizing: border-box;
-    background: #fff;
-    padding: 15px;
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
+.navbar-brand {
+    font-family: 'Pocket Monk';
 }
-  
+
 .modal-close { /*child element of .modal*/
     float: right;
     /*-webkit-appearance: none;*/ 
@@ -65,15 +31,25 @@
   
 .modal h1 { /*child element of .modal*/
     margin-top: 0;
+    margin: auto; 
+    margin-left: 20px;
+    text-align: center;
+    font-family: 'Pokemon GB';
+    font-size: 30px;
 }
 
-.modal img {
-    margin-left: 50px;
+.modal-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
   
 .modal p { /*child element of .modal*/
     margin-bottom: 0;
+    margin: auto;
+    text-align: center;
 }
+
 
 #modal-container {
   display: none; /*the modal is now hidden by default*/
@@ -84,5 +60,21 @@
   display: block;
 }
 
+@font-face {
+    font-family: 'Pokemon GB';
+    src: url('../F&P/PokemonGB.woff2') format('woff2'),
+        url('../F&P/PokemonGB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Pocket Monk';
+    src: url('../F&P/PocketMonk.woff2') format('woff2'),
+        url('../F&P/PocketMonk.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
