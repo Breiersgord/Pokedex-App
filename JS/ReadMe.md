@@ -10,7 +10,7 @@ In order to accomplish this, I utilized a few different coding strategies and me
 While I am happy with the end result, I caution all new coders to remember to double and triple check their spelling and capitalization on ALL projects current and future. Many errors I ran into were a result of small oversights like these, and I am grateful for the mentor I had behind me to help me catch them. Just like Pokemon, You * *"Gotta catch 'em all!"* * if you want your project to funtion and look as intended. 
 
 ### A Pokemon Snap(shot)
-![Screenshot of the Pokedex webpage that displays the image and stats of selected pokemon 'Charmeleon'](F&P/pokedex%20webpage.png)
+![Screenshot of the Pokedex webpage that displays the image and stats of selected pokemon 'Charmeleon'](../F&P/pokedex%20webpage.png)
 
 ### Whose that Pokemon? See for Yourself!
 [Pokedex Webpage](https://breiersgord.github.io/simple-javascript-app/)
