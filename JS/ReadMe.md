@@ -17,4 +17,7 @@ While I am happy with the end result, I caution all new coders to remember to do
 
 ### Acknowledgements
 **API:** [Pokemon API](https://pokeapi.co/)
+
 **Framework:** [Bootstrap](https://getbootstrap.com/)
+
+**Fonts:** [Pocket Monk](https://www.fontspace.com/pocket-monk-font-f23540) & [Pokemon GB](https://www.fontspace.com/pokemon-gb-font-f9621)
